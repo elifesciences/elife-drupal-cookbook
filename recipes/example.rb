@@ -1,8 +1,7 @@
 # Deploy an example Drupal site.
 # TODO Move this to a definition with parameters.
-include_recipe "mysql"
-include_recipe "drush"
-include_recipe "drush_make"
+#include_recipe "mysql"
+#include_recipe "drush"
 
 # # Add an admin user to mysql
 # execute "add-admin-user" do
