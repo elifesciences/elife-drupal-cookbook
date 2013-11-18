@@ -2,18 +2,21 @@
   ServerName <%= @params[:server_name] %>
   ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
   DocumentRoot <%= @params[:docroot] %>
+  <% if @params[:custom_php_ini] -%>
+  PHPINIDir <%= @params[:custom_php_ini] %>
+  <% end -%>
 
   RewriteEngine On
   # level 0 => Do not log rewrite
   RewriteLogLevel 0
-  
+
   <Directory <%= @params[:docroot] %>>
     Options FollowSymLinks
     AllowOverride All
     Order allow,deny
     Allow from all
   </Directory>
-  
+
   <Directory />
     Options FollowSymLinks
     AllowOverride None

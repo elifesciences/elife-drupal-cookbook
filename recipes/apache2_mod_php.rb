@@ -17,12 +17,11 @@ node.default["apache"]["worker"]["maxsparethreads"] = 128
 node.default["apache"]["worker"]["threadsperchild"] = 16
 node.default["apache"]["worker"]["maxrequestsperchild"] = 0
 
-node.normal["php5"]["max_execution_time"] = "180"
-node.normal["php5"]["memory_limit"] = "256M"
+node.normal["php5"]["resource_limits"]["max_execution_time"] = "180"
+node.normal["php5"]["resource_limits"]["memory_limit"] = "256M"
 
 include_recipe "php"
 include_recipe "apache2"
 include_recipe "apache2::mod_expires"
 include_recipe "apache2::mod_php5"
-include_recipe "apache2::mod_rewrite"
 
