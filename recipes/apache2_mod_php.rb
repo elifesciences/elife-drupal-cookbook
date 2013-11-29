@@ -19,6 +19,7 @@ node.default["apache"]["worker"]["maxrequestsperchild"] = 0
 
 node.normal["php5"]["resource_limits"]["max_execution_time"] = "180"
 node.normal["php5"]["resource_limits"]["memory_limit"] = "256M"
+node.normal["php5"]["output_buffering"] = "4096"
 
 include_recipe "php"
 include_recipe "apache2"
