@@ -2,8 +2,7 @@
 # TODO Make this configurable per host.
 # include_recipe "hosts"
 
-# Create project php.ini if it doesn't exist already
-# Without this file it would use the default /etc/php5/apache2/php.ini
+# Create custom project php.ini to avoid using the default php.ini
 template "/etc/php5/apache2/php.ini" do
   source "php.ini.erb"
   owner "root"
