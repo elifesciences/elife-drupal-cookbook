@@ -9,6 +9,9 @@ include_recipe "php::module_gd"
 # Drupal fails to boot without this!
 include_recipe "php::module_mysql"
 
+# PHP Code caching extension
+include_recipe "elife-drupal-cookbook::php_apc"
+
 # PHP Upload progress is commonly used
 include_recipe "elife-drupal-cookbook::php_upl_prog"
 
